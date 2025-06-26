@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌦️ Clima-Hub
 
-## Getting Started
+**Clima-Hub** é uma aplicação web desenvolvida para exibir dados climáticos de qualquer localidade do **Brasil**. O site é totalmente **responsivo** e conta com um sistema de **alternância de tema (claro/escuro)**, com um botão animado para melhorar a experiência do usuário.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **React.js**
+- **Next.js**
+- **TypeScript**
+- **TailwindCSS**
+- **HTML**
+- **Git**
+- **API Rest**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Funcionalidades
 
-## Learn More
+- 🔍 **Busca de clima por cidade brasileira**
+- 🌤️ **Exibição de dados climáticos em tempo real**, incluindo:
+  - Temperatura atual
+  - Condição do tempo (ensolarado, chuvoso, etc.)
+  - Umidade relativa do ar
+  - Velocidade do vento
+- 🌓 **Alternância entre modo claro e escuro**
+- 📱 **Design responsivo**, adaptado para dispositivos móveis e desktop
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔌 Consumo de API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O projeto utiliza a função nativa `fetch` do JavaScript (com suporte do TypeScript) para realizar chamadas síncronas a uma **API de clima**.  
+Essas requisições buscam os dados meteorológicos de acordo com a cidade informada pelo usuário.
 
-## Deploy on Vercel
+Acesse pelo link: https://clima-hub.vercel.app/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

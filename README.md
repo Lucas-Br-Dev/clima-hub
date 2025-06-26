@@ -31,6 +31,6 @@
 
 ## 🔌 Consumo de API
 
-O projeto utiliza a função nativa `fetch` do JavaScript (com suporte do TypeScript) para realizar chamadas assíncronas a uma **API de clima**.  
+O projeto utiliza a função nativa `fetch` do JavaScript (com suporte do TypeScript) para realizar chamadas síncronas a uma **API de clima**.  
 Essas requisições buscam os dados meteorológicos de acordo com a cidade informada pelo usuário.
 

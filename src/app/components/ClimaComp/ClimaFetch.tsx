@@ -12,7 +12,7 @@ export const ClimaFetch = ({ themeActual }: Props) => {
 
     const obterLatLon = async () => {
         try {
-            const req = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputValue},BR&limit=1&appid=99a62839b2a5f6395c9dc68e036eaafd`)
+            const req = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${inputValue},BR&limit=1&appid=99a62839b2a5f6395c9dc68e036eaafd`)
 
             if (!req.ok) { throw new Error("Erro na requisição") }
             const json = await req.json();

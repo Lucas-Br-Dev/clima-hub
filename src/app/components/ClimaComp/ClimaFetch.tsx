@@ -40,7 +40,6 @@ export const ClimaFetch = ({ themeActual }: Props) => {
     const [inputValue, setInputvalue] = useState("")
     const [dataClimate, setDataClimate] = useState<null | DataClima>(null)
 
-
     return (
         <div className={`${!themeActual ? "bg-lime-200 text-black" : "bg-gray-800 text-white"} rounded-2xl shadow-md shadow-black w-72 md:min-w-xl`} >
             {dataClimate === null &&

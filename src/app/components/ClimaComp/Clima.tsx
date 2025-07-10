@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { ClimaShow } from "./ClimaShow"
 import { BotomTheme } from "../../../UI/ButtonTheme"
 

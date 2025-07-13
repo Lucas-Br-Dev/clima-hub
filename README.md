@@ -3,7 +3,7 @@
 Acesse pelo link: https://clima-hub.vercel.app/
 
 **Clima-Hub** é uma aplicação web desenvolvida para exibir dados climáticos de qualquer localidade do **Brasil**. O site é totalmente **responsivo** e conta com um sistema de **alternância de tema (claro/escuro)**, com um botão animado para melhorar a experiência do usuário.
-
+Uma aplicação "simples", para demonstrar que estou APTO para lidar com consumo de APIs, HOOKS do React e demais tecnologias 
 ---
 
 ## 🚀 Tecnologias Utilizadas

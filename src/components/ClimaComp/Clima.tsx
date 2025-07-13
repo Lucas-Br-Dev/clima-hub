@@ -1,7 +1,7 @@
 "use client"
 
 import { ClimaShow } from "./ClimaShow"
-import { BotomTheme } from "../../../UI/ButtonTheme"
+import { BotomTheme } from "@/UI/ButtonTheme"
 
 type Props = {
     themeDark: boolean;

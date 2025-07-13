@@ -1,6 +1,6 @@
 "use client"
 
-import { Clima } from "./components/ClimaComp/Clima"
+import { Clima } from "../components/ClimaComp/Clima"
 import { useState } from "react"
 
 const Page = () => {

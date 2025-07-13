@@ -1,18 +1,20 @@
 "use client"
 
+import { ThemeContext, } from "@/context/ThemeContext"
 import { Clima } from "../components/ClimaComp/Clima"
 import { useState } from "react"
 
 const Page = () => {
 
-  
-  const [themeDark, setThemeDark] = useState(false)
-  const switchTheme = () => { setThemeDark(!themeDark) }
+  const [Theme, setTheme] = useState(false)
+  const switchTheme = () => {setTheme(!Theme)}
 
-  return( 
-    <div className={`min-h-dvh bg-linear-to-r ${!themeDark ? "from-lime-700 to-lime-400" : "from-gray-700 to-gray-500"} `} >
-      <Clima themeDark={themeDark} switchTheme={switchTheme} />
-    </div>
+  return (
+    <ThemeContext.Provider value={{Theme, switchTheme}}>
+      <div className={`min-h-dvh bg-linear-to-r ${!Theme ? "from-gray-300 to-gray-200" : "from-gray-800 to-gray-950"} `} >
+        <Clima />
+      </div>
+    </ThemeContext.Provider>
   )
 }
 

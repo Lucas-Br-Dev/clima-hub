@@ -1,24 +1,22 @@
 "use client"
 
+import { useContext } from "react"
 import { ClimaShow } from "./ClimaShow"
 import { BotomTheme } from "@/UI/ButtonTheme"
+import { ThemeContext } from "@/context/ThemeContext"
 
-type Props = {
-    themeDark: boolean;
-    switchTheme: () => void
-}
+export const Clima = () => {
 
-export const Clima = ({themeDark ,switchTheme}: Props) => {
-
+    const { Theme } = useContext(ThemeContext)
 
     return (
-        <div className="h-full container mx-auto flex flex-col items-center" >
-            <div className={`${!themeDark ? "bg-lime-200 text-black" : "bg-gray-800 text-white"} flex justify-between items-center  w-full p-4 border-b-3 border-black rounded-b-lg shadow shadow-black`} >
+        <div className="h-full mx-auto flex flex-col items-center" >
+            <div className={`${!Theme ? "bg-gray-100 text-black" : "bg-gray-800 text-white"} flex justify-between items-center  w-full p-4 border-b-3 border-black shadow shadow-black`} >
                 <h1 className="text-2xl md:text-4xl" >ClimaHub</h1>
-                <BotomTheme onClickBTN={switchTheme} themeActual={themeDark} />
+                <BotomTheme />
             </div>
             <div className="mt-4 h-full" >
-                <ClimaShow themeActual={themeDark} />
+                <ClimaShow />
             </div>
         </div>
     )

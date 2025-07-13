@@ -1,14 +1,13 @@
 "use client"
 
-type Props = {
-    themeActual: boolean;
-}
-
 import { useState } from "react";
 import { DataClima } from "@/types/DataClimateType";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 
+export const ClimaFetch = () => {
 
-export const ClimaFetch = ({ themeActual }: Props) => {
+    const { Theme } = useContext(ThemeContext)
 
     const obterLatLon = async () => {
         try {
@@ -41,12 +40,12 @@ export const ClimaFetch = ({ themeActual }: Props) => {
     const [dataClimate, setDataClimate] = useState<null | DataClima>(null)
 
     return (
-        <div className={`${!themeActual ? "bg-lime-200 text-black" : "bg-gray-800 text-white"} rounded-2xl shadow-md shadow-black w-72 md:min-w-xl`} >
+        <div className={`${!Theme ? "bg-gray-100 text-black" : "bg-gray-800 text-white"} rounded-2xl shadow-md shadow-black w-72 md:min-w-xl`} >
             {dataClimate === null &&
                 <div className="flex flex-col items-center justify-between  min-h-40  p-4 " >
                     <div className="font-bold text-md md:text-2xl" >Digite o nome da sua cidade</div>
-                    <input value={inputValue} onChange={(value) => setInputvalue(value.target.value)} className="focus:outline-none bg-white border border-black rounded-md p-0.5 shadow-md shadow-lime-950 md:w-md md:text-xl text-black" type="text" />
-                    <button onClick={searchCity} className={`${!themeActual ? "bg-lime-700" : "bg-gray-950"} font-semibold text-white rounded-md text-2xl py-1 px-8 border border-black active:bg-gray-500`} >Buscar</button>
+                    <input value={inputValue} onChange={(value) => setInputvalue(value.target.value)} className="focus:outline-none bg-white border border-black rounded-md p-0.5 shadow-md shadow-gray-950 md:w-md md:text-xl text-black" type="text" />
+                    <button onClick={searchCity} className={`${!Theme ? "bg-gray-200 text-black" : "bg-gray-950 text-white"} font-semibold rounded-md text-2xl py-1 px-8 border border-black active:bg-gray-500`} >Buscar</button>
                 </div>
             }
             {dataClimate !== null &&
@@ -56,7 +55,7 @@ export const ClimaFetch = ({ themeActual }: Props) => {
                     
                     <div className="border rounded-xl flex flex-col md:flex-row items-center  w-full mt-2" >
                         <div className="text-4xl md:text-6xl md:w-1/2 flex justify-center" >{(dataClimate.main.temp).toFixed(1)} <p className="text-3xl" >°C</p></div>
-                        <div className={`${!themeActual ? "bg-lime-900" : "bg-gray-950"} rounded-xl  flex justify-between items-center flex-col w-full md:w-auto p-4`} >
+                        <div className={`${!Theme ? "bg-gray-900" : "bg-gray-950"} rounded-xl  flex justify-between items-center flex-col w-full md:w-auto p-4`} >
                             <img className="" src={`https://openweathermap.org/img/wn/${dataClimate.weather[0].icon}@4x.png`} alt="" />
                             <div className="text-2xl md:text-4xl text-white text-center" >{dataClimate.weather[0].description}</div>
                         </div>
